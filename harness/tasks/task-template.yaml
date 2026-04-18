@@ -1,0 +1,17 @@
+task:
+  id: TASK-0001
+  title: sample task
+  objective: 目的を1文で記述
+  input_paths:
+    - /home/runner/work/my-agents/my-agents/project-template/input
+  output_paths:
+    - /home/runner/work/my-agents/my-agents/project-template/output
+  assigned_personas:
+    - orchestrator
+    - planner
+    - executor
+    - auditor
+    - recorder
+  acceptance_criteria:
+    - 成果物がoutputに存在する
+    - audit_reportが作成される
