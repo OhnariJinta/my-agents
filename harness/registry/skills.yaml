@@ -1,6 +1,6 @@
 version: 1
 skills:
   - id: html-generation
-    file: /home/runner/work/my-agents/my-agents/harness/skills/html-generation.md
+    file: harness/skills/html-generation.md
   - id: svg-generation
-    file: /home/runner/work/my-agents/my-agents/harness/skills/svg-generation.md
+    file: harness/skills/svg-generation.md

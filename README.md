@@ -40,10 +40,10 @@ project-template/
 
 ## 使い方
 
-1. `/home/runner/work/my-agents/my-agents/harness/orchestration/subagent-orchestration.yaml` を起点に、タスクを5ペルソナへ分解します。
-2. `/home/runner/work/my-agents/my-agents/harness/tasks/task-template.yaml` をコピーして実行計画を作成します。
-3. 新しい agent/skill は `/home/runner/work/my-agents/my-agents/harness/registry/*.yaml` に登録します。
-4. 環境作成時は `/home/runner/work/my-agents/my-agents/harness/policies/environment-security-policy.md` の承認手順に従ってください。
+1. `harness/orchestration/subagent-orchestration.yaml` を起点に、タスクを5ペルソナへ分解します。
+2. `harness/tasks/task-template.yaml` をコピーして実行計画を作成します。
+3. 新しい agent/skill は `harness/registry/*.yaml` に登録します。
+4. 環境作成時は `harness/policies/environment-security-policy.md` の承認手順に従ってください。
 
 ## セキュリティ方針（要点）
 

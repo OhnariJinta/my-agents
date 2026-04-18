@@ -1,12 +1,12 @@
 version: 1
 agents:
   - id: orchestrator
-    file: /home/runner/work/my-agents/my-agents/harness/agents/orchestrator.md
+    file: harness/agents/orchestrator.md
   - id: planner
-    file: /home/runner/work/my-agents/my-agents/harness/agents/planner.md
+    file: harness/agents/planner.md
   - id: executor
-    file: /home/runner/work/my-agents/my-agents/harness/agents/executor.md
+    file: harness/agents/executor.md
   - id: auditor
-    file: /home/runner/work/my-agents/my-agents/harness/agents/auditor.md
+    file: harness/agents/auditor.md
   - id: recorder
-    file: /home/runner/work/my-agents/my-agents/harness/agents/recorder.md
+    file: harness/agents/recorder.md
