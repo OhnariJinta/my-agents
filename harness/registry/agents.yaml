@@ -1,0 +1,12 @@
+version: 1
+agents:
+  - id: orchestrator
+    file: harness/agents/orchestrator.md
+  - id: planner
+    file: harness/agents/planner.md
+  - id: executor
+    file: harness/agents/executor.md
+  - id: auditor
+    file: harness/agents/auditor.md
+  - id: recorder
+    file: harness/agents/recorder.md

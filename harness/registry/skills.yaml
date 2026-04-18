@@ -1,0 +1,6 @@
+version: 1
+skills:
+  - id: html-generation
+    file: harness/skills/html-generation.md
+  - id: svg-generation
+    file: harness/skills/svg-generation.md
