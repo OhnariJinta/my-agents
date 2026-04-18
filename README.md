@@ -1,33 +1,60 @@
 # my-agents
 
-汎用タスク向けの **AIハーネス雛形** です。  
-subAgentオーケストレーション、5ペルソナ、セキュアな環境作成ポリシー、拡張可能な agent/skill レジストリ、プロジェクト構成管理テンプレートを提供します。
+**仕様駆動（Spec-Driven）開発ハーネス** です。  
+このリポジトリをクローンするだけで、仕様先行・オーケストレーション型の GitHub Copilot 開発環境が整います。
 
-## 含まれる要素
+## 特徴
 
-- subAgent機能を使うオーケストレーション定義
-- ペルソナ:
-  - Orchestrator
-  - Planner
-  - Executor
-  - Auditor
-  - Recorder
-- 環境作成時ポリシー（ランサムウェア対策、ライセンス/90日クールダウン制約）
-- SKILL:
-  - HTML作成
-  - SVG作成
-- 汎用タスク実行テンプレート
-- agent/skill の成長（追加）に対応するレジストリ
-- 構成管理フォルダ雛形（input/output/scripts/docs/logs）
+- **仕様先行（Spec-First）**: 実装前に必ず仕様を書く。`SPEC.md` が単一真実源
+- **オーケストレーション**: `@orchestrator` → `@spec-writer` / `@implementer` / `@reviewer` の専門分業
+- **インタラクティブフォローアップ**: 作業完了後に `vscode_askQuestions` でクリック選択または自由記述による次の指示を求める
 
-## ディレクトリ
+## クイックスタート
+
+1. このリポジトリをクローンして VS Code で開く
+2. `SPEC.md` に作りたい機能の概要を書く（または `/new-feature` を使う）
+3. `@orchestrator` に要求を伝える → 仕様確認 → 実装 → レビューが自動で流れる
+
+## エージェント
+
+| エージェント | 役割 |
+|---|---|
+| `@orchestrator` | 複雑タスクのルーティング（メインエントリポイント） |
+| `@spec-writer` | 仕様書の作成・更新 |
+| `@implementer` | 仕様に基づく実装 |
+| `@reviewer` | 仕様と実装の整合チェック |
+
+## スラッシュコマンド
+
+| コマンド | 目的 |
+|---|---|
+| `/new-feature` | 新機能の仕様作成から実装まで一貫して進める |
+| `/review-spec` | 仕様と実装の整合性を確認する |
+
+## ディレクトリ構成
 
 ```text
-harness/
-  agents/
-  orchestration/
-  policies/
-  registry/
+my-agents/
+  SPEC.md                          # プロジェクト仕様（単一真実源）
+  docs/
+    specs/
+      SPEC-TEMPLATE.md             # 詳細仕様テンプレート
+  .github/
+    copilot-instructions.md        # ハーネス全体ルール
+    agents/
+      orchestrator.agent.md
+      spec-writer.agent.md
+      implementer.agent.md
+      reviewer.agent.md
+    skills/
+      spec-driven-dev/             # 仕様先行開発ワークフロー
+      followup/                    # 作業後フォローアップ
+    instructions/
+      followup.instructions.md     # フォローアップ強制（全ファイル）
+      spec-consistency.instructions.md  # 仕様整合強制（全ファイル）
+    prompts/
+      new-feature.prompt.md
+      review-spec.prompt.md
   skills/
   tasks/
 project-template/
